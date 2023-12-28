@@ -33,6 +33,28 @@ make
 
 After build complete, the result binary will be: ./bin/ping-pong
 
+### Build for ARM64
+
+Fetch sources as in previos paragraph. Go to build directory.
+
+You must have cross-compile tools installed in your system.
+
+Setup the environment:
+
+export TARGET_ARCH=aarch64 && \
+export TARGET_TRIPLE=aarch64-linux-gnu && \
+export CC=/usr/bin/$TARGET_TRIPLE-gcc && \
+export CXX=/usr/bin/$TARGET_TRIPLE-g++ && \
+export CROSS_COMPILE=/usr/bin/$TARGET_TRIPLE- && \
+
+Select target architecture for cmake configuration:
+
+cmake -DCMAKE_BUILD_TYPE=Release -DARCH=aarch64 ..
+
+And make it:
+
+make -j 8
+
 ## How to run
 
 If you run ./bin/ping-pong without any parameters, it will do two things:

@@ -7,6 +7,14 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(COMMON_LIBS_DIR "${CMAKE_SOURCE_DIR}/../../libs/")
 
+#Select architecture:
+if(NOT ARCH)
+    message (STATUS "Architecture not defined. Use default x86_64")
+    SET(ARCH x86_64)
+else()
+    message (STATUS "Use defined architecture ${ARCH}")
+endif()
+
 #Align build type parameter
 if (NOT CMAKE_BUILD_TYPE)
     message(FATAL_ERROR "CMAKE_BUILD_TYPE should be specified")
@@ -33,8 +41,8 @@ else()
 endif()
 
 #Add DJI PSDK:
-include_directories(${COMMON_LIBS_DIR}/dji-psdk-3.6/include)
-link_directories(${COMMON_LIBS_DIR}/dji-psdk-3.6/lib/x86_64-linux-gnu-gcc)
+include_directories(${COMMON_LIBS_DIR}/dji-psdk-3.8/include)
+link_directories(${COMMON_LIBS_DIR}/dji-psdk-3.8/lib/${ARCH}-linux-gnu-gcc)
 
 
 add_executable(${CMAKE_PROJECT_NAME} ${SORCES})
