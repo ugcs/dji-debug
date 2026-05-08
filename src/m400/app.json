@@ -1,0 +1,37 @@
+{
+    "user_app_id": "170259",
+    "firmware_version": "01.00.00.00",
+    "is_ai_rendering": "false",
+    "platform": "manifold3",
+    "name":{
+        "name_cn": "天空枢纽",
+        "name_en": "SkyHub",
+        "name_jp": "スカイハブ",
+        "name_fr": "SkyHub"
+    },
+    "description": {
+        "description_cn": [
+            "SkyHub监控应用程序"
+        ],
+        "description_en": [
+            "The SkyHub monitoring application"
+        ],
+        "description_jp": [
+            "SkyHub監視アプリケーション"
+        ],
+        "description_fr": [
+            "L'application de surveillance SkyHub"
+        ]
+    },
+    "maintainer": {
+        "maintainer_cn": "SPH 工程",
+        "maintainer_en": "SPH Engineering, SIA",
+        "maintainer_jp": "SPHエンジニアリング",
+        "maintainer_fr": "SPH Engineering, SIA"
+    },
+    "ver_min": "00.00.00.00",
+    "ver_max": "99.99.99.99",
+    "bin": "build/bin/m400",
+    "userconfig": [
+    ]
+}
